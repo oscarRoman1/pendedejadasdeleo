@@ -1,0 +1,140 @@
+<h2>Reporte Numero en Inventario</h2>
+
+ <table class="table">
+  <thead>
+
+    <tr>
+    <th>id</th>
+      <th>Nombre pieza</th>
+      <th>numero</th>
+      <th>compra</th>
+      <th>venta</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @Guardadosnumero.each do |pieza| %>
+      <tr>
+      <td><%= pieza.id %></td>
+        <td><%= pieza.nombrepieza %></td>
+        <td><%= pieza.numero %></td>
+        <td><%= pieza.compra %></td>
+        <td><%= pieza.venta %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% pieza1 = @Guardadosnumero.first %>
+<% pieza2 = @Guardadosnumero.last %>
+
+
+<h2>Reporte Precio de Compra</h2>
+
+ <table class="table">
+  <thead>
+
+    <tr>
+     <th>id</th>
+      <th>Nombre pieza</th>
+      <th>numero</th>
+      <th>compra</th>
+      <th>venta</th>
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @Guardadoscompra.each do |pieza| %>
+      <tr>
+         <td><%= pieza.id %></td>
+        <td><%= pieza.nombrepieza %></td>
+        <td><%= pieza.numero %></td>
+        <td><%= pieza.compra %></td>
+        <td><%= pieza.venta %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% pieza3 = @Guardadoscompra.first %>
+<% pieza4 = @Guardadoscompra.last %>
+
+
+<h2>Reporte Precio de Venta</h2>
+
+ <table class="table">
+  <thead>
+
+    <tr>
+      <th>id</th>
+      <th>Nombre pieza</th>
+      <th>numero</th>
+      <th>compra</th>
+      <th>venta</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @Guardadospieza.each do |pieza| %>
+      <tr>
+     
+        <td><%= pieza.id %></td>
+        <td><%= pieza.nombrepieza %></td>
+        <td><%= pieza.numero %></td>
+        <td><%= pieza.compra %></td>
+        <td><%= pieza.venta %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% pieza5 = @Guardadospieza.first %>
+<% pieza6 = @Guardadospieza.last %>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h3> ordenados por numero $:</h3> <h4><%= pieza1.nombrepieza %> </h4>
+</td>
+        <td><h3> ordenados pormenor numero en stock $:</h3> <h4><%= pieza2.nombrepieza%> </h4></td>
+      
+      </tr>
+      <tr>
+        <td><h3> ordenados por precio de compras en $:</h3> <h4><%= pieza3.nombrepieza%> </h4></td>
+        <td><h3> ordenados por menor precio de compras en $:</h3> <h4><%= pieza4.nombrepieza%> </h4></td>
+        
+      </tr>
+      <tr>
+        <td><h3> El objeto de venta menor $:</h3> <h4><%= pieza5.nombrepieza%> </h4></td>
+        <td><h3> El objeto de venta mayor $:</h3> <h4><%= pieza6.nombrepieza%> </h4></td>
+    
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+<div >
+<%= link_to 'Atrás', piezas_path %>
+</div>
+
+
+

@@ -1,0 +1,37 @@
+<%= form_with(model: pieza, local: true) do |form| %>
+  <% if pieza.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pieza.errors.count, "error") %> prohibited this pieza from being saved:</h2>
+
+      <ul>
+      <% pieza.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombrepieza %>
+    <%= form.text_field :nombrepieza, id: :pieza_nombrepieza %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.number_field :numero, id: :pieza_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :compra %>
+    <%= form.number_field :compra, id: :pieza_compra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :venta %>
+    <%= form.number_field :venta, id: :pieza_venta %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

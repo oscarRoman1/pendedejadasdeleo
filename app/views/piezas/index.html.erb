@@ -1,0 +1,41 @@
+
+<p id="notice"><%= notice %></p>
+
+
+
+  <table class="table">
+  <thead>
+    <tr>
+   
+      <th>Nombre pieza</th>
+      <th>Numero</th>
+      <th>Compra</th>
+      <th>Venta</th>
+      <th>ver</th>
+       <th>editar</th>
+        <th>eliminar</th>
+
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @piezas.each do |pieza| %>
+      <tr>
+        <td><%= pieza.nombrepieza %></td>
+        <td><%= pieza.numero %></td>
+        <td><%= pieza.compra %></td>
+        <td><%= pieza.venta %></td>
+        <td><%= link_to 'Show', pieza %></td>
+        <td><%= link_to 'Edit', edit_pieza_path(pieza) %></td>
+        <td><%= link_to 'Destroy', pieza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+

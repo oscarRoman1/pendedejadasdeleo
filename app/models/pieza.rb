@@ -1,0 +1,2 @@
+class Pieza < ApplicationRecord
+end
